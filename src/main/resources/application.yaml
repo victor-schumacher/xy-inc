@@ -1,0 +1,15 @@
+server:
+  port: 8000
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/xydb
+    username: postgres
+    password: postgres
+
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update #drop n create table again, good for testing, comment this in production
