@@ -3,6 +3,7 @@ package br.com.xyinc.service
 import br.com.xyinc.model.InterestPoint
 import br.com.xyinc.repository.InterestPointRepository
 import org.springframework.stereotype.Component
+import kotlin.math.abs
 
 @Component
 class InterestPointService(private val interestPointRepository: InterestPointRepository) {
@@ -22,7 +23,7 @@ class InterestPointService(private val interestPointRepository: InterestPointRep
 
         for(i in 0 until allInterestPoints.size){
 
-            coordinatesDifference = (allInterestPoints[i].x.minus(inputX)) + (allInterestPoints[i].y.minus(inputY))
+            coordinatesDifference = (abs(allInterestPoints[i].x - inputX) + abs(allInterestPoints[i].y - inputY))
 
             if(coordinatesDifference <= maxDistance){
 
