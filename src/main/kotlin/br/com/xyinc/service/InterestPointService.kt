@@ -23,7 +23,7 @@ class InterestPointService(private val interestPointRepository: InterestPointRep
 
         for(i in 0 until allInterestPoints.size){
 
-            coordinatesDifference = (abs(allInterestPoints[i].x - inputX) + abs(allInterestPoints[i].y - inputY))
+            coordinatesDifference = abs(allInterestPoints[i].x - inputX).plus( abs(allInterestPoints[i].y - inputY))
 
             if(coordinatesDifference <= maxDistance){
 
