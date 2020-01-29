@@ -14,7 +14,7 @@ This application is based on a test which asks for three services:
 ___
 ## Run
 
-##### On the root folder, open two terminal windows and type one command on each:
+##### On the root folder,type the following commands on each:
 `docker-compose up`
 <br>
 
